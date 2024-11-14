@@ -4,11 +4,28 @@
 package ads.poo;
 import edu.princeton.cs.algs4.Draw;
 
+import java.awt.*;
+
 public class App {
+    private Draw draw;
+    public App() {
+        this.draw = new Draw();
+        this.draw.setCanvasSize(300, 600);
+        this.draw.setXscale(0,300);
+        this.draw.setYscale(0,600);
+    }
     public static void main(String[] args) {
         System.out.println("Hello World");
+        Color verde = new Color(50,160,50);
+        Color vermelho = new Color(200,25,30);
 
-        Draw a = new Draw();
-        a.text(0.5,0.5,"Hello World");
+        App app = new App();
+//        Circulo c = new Circulo(300, 150, 50, verde);
+//        c.desenhar(app.draw);
+
+
+        Malha tab = new Malha(20, 20, 20, 5,5);
+        tab.desenhar(app.draw);
+
     }
 }
